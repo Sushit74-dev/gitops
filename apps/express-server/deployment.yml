@@ -1,26 +1,26 @@
 apiVersion: apps/v1
 kind: Deployment
+
 metadata:
   name: express-server
-  namespace: express-app ✅
+  namespace: express-app
   labels:
-    app: express-server ✅
+    app: express-server
 
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: express-server ✅
+      app: express-server
 
   template:
     metadata:
       labels:
-        app: express-server ✅
+        app: express-server
 
     spec:
       containers:
-      - name: express-server ✅
+      - name: express-server
         image: myacr2gitops3demo.azurecr.io/employee-service:1
         ports:
         - containerPort: 4000
-``
