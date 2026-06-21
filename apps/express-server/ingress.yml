@@ -2,8 +2,10 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: express-server
+  namespace: express-app ✅
   annotations:
     kubernetes.io/ingress.class: nginx
+
 spec:
   rules:
   - host: express-server.local
